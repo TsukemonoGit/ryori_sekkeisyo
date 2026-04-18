@@ -14,7 +14,7 @@
 _%>
 <%*
 
-const noteDate = new Date(tp.file.title)
+const noteDate = new Date(tp.file.title + "T00:00:00")
 const day = Number.isNaN(noteDate.getTime()) ? new Date().getDay() : noteDate.getDay()
 const prepHeading = day === 0 ? "仕込み" : "明日の準備"
 
