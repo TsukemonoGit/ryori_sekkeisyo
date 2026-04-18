@@ -12,9 +12,9 @@
 - 明日の準備を1件表示  
 */  
 _%>
-
 <%*
-const day = Number(tp.date.now("d")) // 0=日,1=月,...6=土
+
+const day = Number(tp.date.now("d"))
 
 const list = [
   {
@@ -23,7 +23,8 @@ const list = [
     next: "鶏むね下味冷凍・ラベル「月」",
     action: "煮る",
     rule: "カレー",
-    note: "全部入れる"
+    note: "全部入れる",
+    time: "15分"
   },
   {
     name: "Mon",
@@ -31,7 +32,8 @@ const list = [
     next: "パスタ・ベーコン確認",
     action: "焼く",
     rule: "甘辛",
-    note: "フライパン12分"
+    note: "フライパン12分",
+    time: "12分"
   },
   {
     name: "Tue",
@@ -39,7 +41,8 @@ const list = [
     next: "豚肉 冷蔵へ移動（必要時）",
     action: "茹でて和える",
     rule: "にんにく油",
-    note: "パスタ or うどん"
+    note: "パスタ or うどん",
+    time: "15分"
   },
   {
     name: "Wed",
@@ -47,7 +50,8 @@ const list = [
     next: "魚 左手前へ移動",
     action: "炒める",
     rule: "塩",
-    note: "肉→野菜"
+    note: "肉→野菜",
+    time: "8分"
   },
   {
     name: "Thu",
@@ -55,7 +59,8 @@ const list = [
     next: "ひき肉 冷蔵へ移動",
     action: "焼く",
     rule: "バター＋醤油",
-    note: "凍ったまま"
+    note: "凍ったまま",
+    time: "12分"
   },
   {
     name: "Fri",
@@ -63,7 +68,8 @@ const list = [
     next: "干物 左手前へ移動・日曜具材確認",
     action: "炒める",
     rule: "甘辛",
-    note: "加熱前に混ぜる"
+    note: "加熱前に混ぜる",
+    time: "10分"
   },
   {
     name: "Sat",
@@ -71,7 +77,8 @@ const list = [
     next: "余り食材リスト化",
     action: "焼く",
     rule: "不要",
-    note: "弱火"
+    note: "弱火",
+    time: "10分"
   }
 ]
 
@@ -89,10 +96,17 @@ _%>
 - [ ] <% d.next %>
 
 ## 実行チェック
+- ⏱ 目安: <% d.time %>
 - [ ] 食材確認
 - [ ] 器具準備
 - [ ] タイマー設定
 - [ ] 調理
+
+## 補充候補
+- [ ] 
+
+## 今日の一言
+- 
 
 ## メモ
 - <% d.note %>
